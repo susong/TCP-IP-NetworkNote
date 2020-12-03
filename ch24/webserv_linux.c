@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 {
     int serv_sock, clnt_sock;
     struct sockaddr_in serv_adr, clnt_adr;
-    int clnt_adr_size;
+    socklen_t clnt_adr_size;
     char buf[BUF_SIZE];
     pthread_t t_id;
     if (argc != 2)
@@ -70,7 +70,7 @@ void *request_handler(void *arg)
         send_error(clnt_write);
         fclose(clnt_read);
         fclose(clnt_write);
-        return;
+        return NULL;
     }
     strcpy(method, strtok(req_line, " /"));
     strcpy(file_name, strtok(NULL, " /"));
@@ -80,10 +80,11 @@ void *request_handler(void *arg)
         send_error(clnt_write);
         fclose(clnt_read);
         fclose(clnt_write);
-        return;
+        return NULL;
     }
     fclose(clnt_read);
     send_data(clnt_write, ct, file_name);
+    return NULL;
 }
 void send_data(FILE *fp, char *ct, char *file_name)
 {

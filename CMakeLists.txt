@@ -1,0 +1,107 @@
+cmake_minimum_required(VERSION 3.2)
+project(TCP-IP-NetworkNote)
+set(CMAKE_C_STANDARD 99)
+
+add_executable(ch01_fd_seri ch01/fd_seri.c)
+add_executable(ch01_hello_client ch01/hello_client.c)
+add_executable(ch01_hello_server ch01/hello_server.c)
+add_executable(ch01_low_open ch01/low_open.c)
+add_executable(ch01_low_read ch01/low_read.c)
+
+add_executable(ch02_tcp_client ch02/tcp_client.c)
+add_executable(ch02_tcp_server ch02/tcp_server.c)
+
+add_executable(ch03_endian_check ch03/endian_check.c)
+add_executable(ch03_endian_conv ch03/endian_conv.c)
+add_executable(ch03_inet_addr ch03/inet_addr.c)
+add_executable(ch03_inet_aton ch03/inet_aton.c)
+add_executable(ch03_inet_ntoa ch03/inet_ntoa.c)
+
+add_executable(ch04_echo_client ch04/echo_client.c)
+add_executable(ch04_echo_server ch04/echo_server.c)
+add_executable(ch04_hello_client ch04/hello_client.c)
+add_executable(ch04_hello_server ch04/hello_server.c)
+
+add_executable(ch05_echo_client2 ch05/echo_client2.c)
+add_executable(ch05_My_op_client ch05/My_op_client.c)
+add_executable(ch05_My_op_server ch05/My_op_server.c)
+add_executable(ch05_op_client ch05/op_client.c)
+add_executable(ch05_op_server ch05/op_server.c)
+
+add_executable(ch06_bound_host1 ch06/bound_host1.c)
+add_executable(ch06_bound_host2 ch06/bound_host2.c)
+add_executable(ch06_uecho_client ch06/uecho_client.c)
+add_executable(ch06_uecho_con_client ch06/uecho_con_client.c)
+add_executable(ch06_uecho_server ch06/uecho_server.c)
+
+add_executable(ch07_file_client ch07/file_client.c)
+add_executable(ch07_file_server ch07/file_server.c)
+
+add_executable(ch08_gethostbyaddr ch08/gethostbyaddr.c)
+add_executable(ch08_gethostbyname ch08/gethostbyname.c)
+
+add_executable(ch09_get_buf ch09/get_buf.c)
+add_executable(ch09_reuseadr_eserver ch09/reuseadr_eserver.c)
+add_executable(ch09_set_buf ch09/set_buf.c)
+add_executable(ch09_sock_type ch09/sock_type.c)
+
+add_executable(ch10_echo_mpclient ch10/echo_mpclient.c)
+add_executable(ch10_echo_mpserv ch10/echo_mpserv.c)
+add_executable(ch10_fork ch10/fork.c)
+add_executable(ch10_remove_zomebie ch10/remove_zomebie.c)
+add_executable(ch10_sigaction ch10/sigaction.c)
+add_executable(ch10_signal ch10/signal.c)
+add_executable(ch10_test_server ch10/test_server.c)
+add_executable(ch10_wait ch10/wait.c)
+add_executable(ch10_waitpid ch10/waitpid.c)
+add_executable(ch10_zombie ch10/zombie.c)
+
+add_executable(ch11_echo_storeserv ch11/echo_storeserv.c)
+add_executable(ch11_pipe1 ch11/pipe1.c)
+add_executable(ch11_pipe2 ch11/pipe2.c)
+add_executable(ch11_pipe3 ch11/pipe3.c)
+
+add_executable(ch12_echo_selectserv ch12/echo_selectserv.c)
+add_executable(ch12_select ch12/select.c)
+
+add_executable(ch13_oob_recv ch13/oob_recv.c)
+add_executable(ch13_oob_send ch13/oob_send.c)
+add_executable(ch13_peek_recv ch13/peek_recv.c)
+add_executable(ch13_peek_send ch13/peek_send.c)
+add_executable(ch13_readv ch13/readv.c)
+add_executable(ch13_writev ch13/writev.c)
+
+add_executable(ch14_news_receiver ch14/news_receiver.c)
+add_executable(ch14_news_receiver_brd ch14/news_receiver_brd.c)
+add_executable(ch14_news_sender ch14/news_sender.c)
+add_executable(ch14_news_sender_brd ch14/news_sender_brd.c)
+
+add_executable(ch15_desto ch15/desto.c)
+add_executable(ch15_echo_client ch15/echo_client.c)
+add_executable(ch15_echo_stdserv ch15/echo_stdserv.c)
+add_executable(ch15_stdcpy ch15/stdcpy.c)
+add_executable(ch15_syscpy ch15/syscpy.c)
+add_executable(ch15_todes ch15/todes.c)
+
+add_executable(ch16_dup ch16/dup.c)
+add_executable(ch16_sep_clnt ch16/sep_clnt.c)
+add_executable(ch16_sep_serv ch16/sep_serv.c)
+add_executable(ch16_sep_serv2 ch16/sep_serv2.c)
+
+add_executable(ch17_echo_EDGEserv ch17/echo_EDGEserv.c)
+add_executable(ch17_echo_EPETserv ch17/echo_EPETserv.c)
+add_executable(ch17_echo_EPLTserv ch17/echo_EPLTserv.c)
+add_executable(ch17_echo_epollserv ch17/echo_epollserv.c)
+
+add_executable(ch18_chat_clnt ch18/chat_clnt.c)
+add_executable(ch18_chat_server ch18/chat_server.c)
+add_executable(ch18_mutex ch18/mutex.c)
+add_executable(ch18_semaphore ch18/semaphore.c)
+add_executable(ch18_thread1 ch18/thread1.c)
+add_executable(ch18_thread2 ch18/thread2.c)
+add_executable(ch18_thread3 ch18/thread3.c)
+add_executable(ch18_thread4 ch18/thread4.c)
+
+add_executable(ch24_webserv_linux ch24/webserv_linux.c)
+
+link_libraries(pthread)
